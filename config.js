@@ -33,6 +33,54 @@ var config = {
                }
           ]
       },
+      {
+            id: 'id-rentburden',
+            title: 'Rent Burden',
+            // image: './path/to/image/source.png',
+            description: 'Chloropeth Map of rent burden by community area.',
+            location: {
+                center: [-87.62584, 41.87269],
+                zoom: 11,
+                pitch: 0,
+                bearing: 0
+            },
+            onChapterEnter: [
+                 {
+                     layer: 'sea10026-by-community-area-d89drz',
+                     opacity: 1
+                 }
+            ],
+            onChapterExit: [
+                 {
+                     layer: 'sea10026-by-community-area-d89drz',
+                     opacity: 0
+                 }
+            ]
+        },
+        {
+            id: 'id-evictions',
+            title: 'Evictions',
+            // image: './path/to/image/source.png',
+            description: 'Chloropeth Map of evictions by community area.',
+            location: {
+                center: [-87.62584, 41.87269],
+                zoom: 11,
+                pitch: 0,
+                bearing: 0
+            },
+            onChapterEnter: [
+                 {
+                     layer: 'evictions-commarea',
+                     opacity: 1
+                 }
+            ],
+            onChapterExit: [
+                 {
+                     layer: 'evictions-commarea',
+                     opacity: 0
+                 }
+            ]
+        },
         {
             id: 'slug-style-id',
             title: 'Affordable Rental Housing Developments',
@@ -77,6 +125,54 @@ var config = {
             onChapterExit: [
                  {
                      layer: 'cleaned-city-owned-inventory-080a1x',
+                     opacity: 0
+                 }
+            ]
+        },
+        {
+            id: 'id-grocerystores',
+            title: 'Grocery Stores',
+            // image: './path/to/image/source.png',
+            description: 'Grocery Stores since 2013.',
+            location: {
+                center: [-87.62584, 41.87269],
+                zoom: 11,
+                pitch: 0,
+                bearing: 0
+            },
+            onChapterEnter: [
+                 {
+                     layer: 'grocery-stores-2013-bq0vo4',
+                     opacity: 1
+                 }
+            ],
+            onChapterExit: [
+                 {
+                     layer: 'grocery-stores-2013-bq0vo4',
+                     opacity: 0
+                 }
+            ]
+        },
+        {
+            id: 'id-busstops',
+            title: 'Bus Stops',
+            // image: './path/to/image/source.png',
+            description: 'All CTA Bus Stops',
+            location: {
+                center: [-87.62584, 41.87269],
+                zoom: 10,
+                pitch: 0,
+                bearing: 0
+            },
+            onChapterEnter: [
+                 {
+                     layer: 'cta-busstops-d2lkuk',
+                     opacity: 1
+                 }
+            ],
+            onChapterExit: [
+                 {
+                     layer: 'cta-busstops-d2lkuk',
                      opacity: 0
                  }
             ]
