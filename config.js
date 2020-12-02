@@ -37,7 +37,7 @@ var config = {
           id: 'id-city-owned-land',
           title: 'City-Owned Land Inventory',
           // image: './path/to/image/source.png',
-          description: 'We found all the city owned land inventories in Chicago. Here are the ones that are up for sale, owned solely by the city of Chicago, and have a zoning code that begins with R, for rent. This land could serve as potential sites for new affordable housing.',
+          description: 'We found all the city-owned land inventory in Chicago. Here are those that are available for sale, owned solely by the city of Chicago, and are zoned for residential use. These lots represent the available land that we believe can and should be used for the production of affordable housing via CLTs.',
           location: {
               center: [-87.560, 41.823],
               zoom: 10,
@@ -59,9 +59,9 @@ var config = {
       },
       {
             id: 'id-rentburden-community',
-            title: 'Rent Burden',
+            title: 'Rent Burdened Households in Chicago',
             // image: './path/to/image/source.png',
-            description: 'Chloropeth Map of rent burden by community area.',
+            description: 'The U.S. Census Bureau designates those households that spend more than 30% of their income on rent as rent burdened. There are two tiers of rent burden reported in the Census Bureau’s data: the proportion of residents paying more than 30% and the proportion spending more than 50% of their income on rent. <br>\n<br>\n In Chicago, 22% of renters spend more than a third of their income on rent, and 25% of renters spend more than half of their income on rent. These are roughly equivalent to national rates of rent burden at each of these levels.',
             location: {
                 center: [-87.560, 41.823],
                 zoom: 10,
@@ -71,7 +71,7 @@ var config = {
             onChapterEnter: [
                  {
                      layer: 'sea10026-by-community-area-d89drz',
-                     opacity: 0.75
+                     opacity: 0.8
                  }
             ],
             onChapterExit: [
@@ -83,9 +83,9 @@ var config = {
         },
         {
               id: 'id-rentburden-community-zoomed',
-              title: 'Rent Burden',
+              title: 'Rent Burdened Households in Chicago',
               // image: './path/to/image/source.png',
-              description: 'Chloropeth Map of rent burden by community area.',
+              description: 'We see that there are ample city-owned lots available in the especially rent-burdened communities of West Garfield Park, East Garfield Park, North Lawndale, Englewood, and West Englewood.',
               location: {
                   center: [-87.560, 41.823],
                   zoom: 11,
@@ -95,21 +95,29 @@ var config = {
               onChapterEnter: [
                    {
                        layer: 'sea10026-by-community-area-d89drz',
-                       opacity: 0.75
+                       opacity: 0.8
+                   },
+                   {
+                       layer: 'Comm_Area_Labels',
+                       opacity: 1
                    }
               ],
               onChapterExit: [
                    {
                        layer: 'sea10026-by-community-area-d89drz',
                        opacity: 0
+                   },
+                   {
+                       layer: 'Comm_Area_Labels',
+                       opacity: 0
                    }
               ]
           },
           {
                 id: 'id-rentburden-tract',
-                title: 'Rent Burden',
+                title: 'Rent Burdened Households in Chicago',
                 // image: './path/to/image/source.png',
-                description: 'Chloropeth Map of rent burden by Census tract.',
+                description: 'For additional detail, here is the rent-burden data presented at the U.S. Census tract level.',
                 location: {
                     center: [-87.560, 41.823],
                     zoom: 11,
@@ -119,7 +127,7 @@ var config = {
                 onChapterEnter: [
                      {
                          layer: 'sea10026-w-tracts-by-communit-71pqil',
-                         opacity: 0.75
+                         opacity: 0.8
                      }
                 ],
                 onChapterExit: [
@@ -131,9 +139,9 @@ var config = {
             },
         {
             id: 'id-evictions-community',
-            title: 'Evictions',
+            title: 'Evictions Between 2013-2017 in Chicago',
             // image: './path/to/image/source.png',
-            description: 'Chloropeth Map of evictions by community area.',
+            description: 'Using data from the Lawyers’ Committee for Better Housing, we mapped the average rate of eviction filings by community area from 2013-2017. <br>\n<br>\n Due to evidence that eviction records, which are generated when a landlord files an eviction notice with the court systems, have negative impacts on tenants regardless of whether the eviction takes place, we focused on the rate of filings rather than official judgments for eviction. <br>\n<br>\n The annual average of eviction filings between 2013 and 2017: 22,443 <br>\n<br>\n 53% of these cases ended in an eviction order: an average of about 4,500 households per year ',
             location: {
                 center: [-87.560, 41.823],
                 zoom: 10,
@@ -143,7 +151,7 @@ var config = {
             onChapterEnter: [
                  {
                      layer: 'evictions-commarea',
-                     opacity: 0.75
+                     opacity: 0.8
                  }
             ],
             onChapterExit: [
@@ -155,9 +163,9 @@ var config = {
         },
         {
             id: 'id-evictions-community-zoomed',
-            title: 'Evictions',
+            title: 'Evictions Between 2013-2017 in Chicago',
             // image: './path/to/image/source.png',
-            description: 'Chloropeth Map of evictions by community area.',
+            description: 'We see that there are ample city-owned lots available in the following communities that experienced especially high rates of eviction: West Garfield Park, East Garfield Park, North Lawndale, Englewood, and West Englewood. <br>\n<br>\n These communities were also shown to be relatively rent burdened in the previous map.',
             location: {
                 center: [-87.560, 41.823],
                 zoom: 11,
@@ -167,21 +175,29 @@ var config = {
             onChapterEnter: [
                  {
                      layer: 'evictions-commarea',
-                     opacity: 0.75
+                     opacity: 0.8
+                 },
+                 {
+                     layer: 'Comm_Area_Labels',
+                     opacity: 1
                  }
             ],
             onChapterExit: [
                  {
                      layer: 'evictions-commarea',
                      opacity: 0
+                 },
+                 {
+                     layer: 'Comm_Area_Labels',
+                     opacity: 0
                  }
             ]
         },
         {
             id: 'id-evictions-tract',
-            title: 'Evictions',
+            title: 'Evictions Between 2013-2017 in Chicago',
             // image: './path/to/image/source.png',
-            description: 'Chloropeth Map of evictions by Census tract.',
+            description: 'For additional detail, here is the evictions data presented at the U.S. Census tract level.',
             location: {
                 center: [-87.560, 41.823],
                 zoom: 11,
@@ -191,7 +207,7 @@ var config = {
             onChapterEnter: [
                  {
                      layer: 'eviction-tract',
-                     opacity: 0.75
+                     opacity: 0.8
                  }
             ],
             onChapterExit: [
