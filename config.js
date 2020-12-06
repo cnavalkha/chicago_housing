@@ -7,7 +7,7 @@ var config = {
     // title: 'From Vacant Lots to Permanently Affordable Housing',
     // subtitle: 'Leveraging vacant properties in Chicago for affordable housing',
     // byline: 'By Jennah Haque, Chenab Navalkha, and Asher Simon',
-    footer: 'Source: City of Chicago Data Portal',
+    footer: 'Here are our final recommendations for potential parcels for affordable housing. Hover over each dot for more information.',
     chapters: [
       {
           id: 'id-chicago-blank',
@@ -22,9 +22,10 @@ var config = {
           },
           onChapterEnter: [
                {
+                   
                    layer: 'cleaned-city-owned-inventory-080a1x',
                    opacity: 0
-               }
+               },
           ],
           onChapterExit: [
                {
@@ -245,7 +246,7 @@ var config = {
             id: 'id-grocerystores',
             title: 'Grocery Stores',
             // image: './path/to/image/source.png',
-            description: 'Here are all the grocery and liquor stores in Chicago, collected in 2013. We wanted to avoid proposing a CLT in the middle of a food desert. Luckily, access to produce is widely available in the two largest concentrations of city owned land inventory that we focus on.',
+            description: 'Here are all the grocery and liquor stores in Chicago, collected in 2013. We wanted to avoid proposing a CLT in the middle of a food desert. As access to grocery stores seems to be uneven around the community owned land, decision makers should consider this when selecting parcels for affordable housing.',
             location: {
                 center: [-87.560, 41.823],
                 zoom: 11,
