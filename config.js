@@ -290,5 +290,30 @@ var config = {
                  }
             ]
         },
+      {
+          id: 'id-parcel2',
+          title: 'Here is another example of a vacant lot.',
+          image: './images/1501Scentralpark.png',
+          description: '1501 South Central Park Avenue Chicago, Illinois',
+          location: {
+              center: [-87.560, 41.823],
+              zoom: 11,
+              pitch: 0,
+              bearing: 0
+          },
+          onChapterEnter: [
+               {
+                   
+                   layer: 'central park',
+                   opacity: 1
+               },
+          ],
+          onChapterExit: [
+               {
+                   layer: 'central park',
+                   opacity: 0
+               }
+          ]
+      },
     ]
 };
