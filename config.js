@@ -7,7 +7,7 @@ var config = {
     // title: 'From Vacant Lots to Permanently Affordable Housing',
     // subtitle: 'Leveraging vacant properties in Chicago for affordable housing',
     // byline: 'By Jennah Haque, Chenab Navalkha, and Asher Simon',
-    footer: 'Here are our final recommendations for potential parcels for affordable housing. Hover over each dot for more information.',
+    footer: 'Here are our recommendations for potential parcels for affordable housing. Hover over each dot for more information. We had to generalize our recommendations due to time and COVID-19 restricting us from seeing specific lots in person. We had to rely solely on the avaliable data from the Chicago Open Data Portal. Because of this, we recommend for Chicago housing activists to use these parcels as a starting point. We hope they can conduct more field research to down-select final parcel options.',
     chapters: [
       {
           id: 'id-chicago-blank',
@@ -292,7 +292,7 @@ var config = {
         },
       {
           id: 'id-parcel2',
-          title: 'Here is another example of a vacant lot.',
+          title: 'Here is one example of a vacant lot.',
           image: './images/1501Scentralpark.png',
           description: '1501 South Central Park Avenue Chicago, Illinois',
           location: {
